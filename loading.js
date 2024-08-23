@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", function () {
             // Pokaż kontener Three.js
             main.style.display = "block";
         }, 4000); // Czas trwania animacji w milisekundach
-    }, 2000); // Tutaj możesz dostosować czas opóźnienia
+    }, 3000); // Tutaj możesz dostosować czas opóźnienia
 });
