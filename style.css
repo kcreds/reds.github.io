@@ -527,13 +527,22 @@ p {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+    html{
+        overflow-y: auto;
+    }
+
     .dot-navigation {
+        display: none;
+    }
+
+    .cntButton{
         display: none;
     }
 
     .position-info {
         display: none;
+        visibility: hidden;
     }
 }
 
