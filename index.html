@@ -1,1 +1,209 @@
-test
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Gruca - Web DEV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+    <meta name="robots" content="noindex, nofollow" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+                {
+                    "imports": {
+                    "three": "https://unpkg.com/three@0.126.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.126.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    padding: {
+                        '8vw': '8vw',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body id="main" class="container">
+    <div id="loading-screen">
+        <span class="loader"></span>
+    </div>
+    <!-- <div class="dot-navigation" id="dot-navigation">
+        <span class="dot dot1 dots-active" data-target="head-container"></span>
+        <span class="dot dot2" data-target="text-content"></span>
+        <span class="dot dot3" data-target="skills-content"></span>
+    </div> -->
+    <canvas id="three-container"></canvas>
+    <a class="float-right mt-5" id="cntButton" href="#">
+        <img class="normal" src="assets/Icons/svg/cbs-green.svg" alt="cnt">
+        <img class="clicked hidden" src="assets/Icons/svg/cbs-red.svg" alt="cnt">
+    </a>
+    <div id="cnt">
+        <div id="position-info">
+            <spna class="x">X</spna> 0 <br>
+            <spna class="y">Y</spna> 0
+        </div>
+        <div class="scroll-down" onclick="scrollDown()">
+            <section id="arrows">
+                <a><span></span><span></span><span></span></a>
+            </section>
+        </div>
+        <div class="head-container">
+            <h1>Robert Gruca</h1>
+            <h3>Web developer</h3>
+        </div>
+        <div class="text-content animate-text">
+            <p>Cześć, mam na jestem <span class="color-green">Robert</span> moją pasją oraz pracą jest programowanie,
+                preferuję
+                technologie
+                webowe, lecz miałem też styczność z wieloma innymi. Potrafię pracować
+                zarówno samodzielnie, jak i zespołowo. Staram utrzymywać się dobry kontakt z wszystkimi klientami, dla
+                których wykonuję zlecenie oraz aby efekt pracy jaką wykonuję, był jak najbardziej zadowalający.
+            </p>
+        </div>
+
+        <div class="skills-content pt-5">
+            <h2 class="section-heading pb-7">Kilka moich umiejętności</h2>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 pl-8vw pr-8vw">
+                <!-- Karty -->
+                <div class="card shadow-xl image-full laravel max-h-90 animate-card">
+                    <figure>
+                        <img src="image/skills/laravel.svg" alt="laravel" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title"><span>Laravel</span></h2>
+                    </div>
+                </div>
+                <div class="grid grid-rows-2 gap-y-4 row-span-2 col-span-1 animate-card">
+                    <div class="card shadow-xl image-full mysql">
+                        <figure>
+                            <img src="image/skills/mysql.svg" alt="mysql" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">MySQL</h2>
+                        </div>
+                    </div>
+                    <div class="card shadow-xl image-full js animate-card">
+                        <figure>
+                            <img src="image/skills/javascript.svg" alt="javascript" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">JavaScript</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card shadow-xl image-full php animate-card">
+                    <figure>
+                        <img src="image/skills/php.png" alt="php" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">PHP</h2>
+                    </div>
+                </div>
+                <div class="grid grid-rows-2 gap-y-4 animate-card">
+                    <div class="card shadow-xl image-full tailwind">
+                        <figure>
+                            <img src="image/skills/tailwind.svg" alt="tailwind" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Tailwind</h2>
+                        </div>
+                    </div>
+                    <div class="card shadow-xl image-full git animate-card">
+                        <figure>
+                            <img src="image/skills/git.svg" alt="git" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Git</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-xl image-full insomnia max-h-80 animate-card">
+                    <figure>
+                        <img src="image/skills/insomnia.svg" alt="insomnia rest" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Insomnia REST</h2>
+                    </div>
+                </div>
+                <div class="card shadow-xl image-full w-full figma max-h-80 animate-card">
+                    <figure>
+                        <img src="image/skills/figma.svg" alt="Figma" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Figma</h2>
+                    </div>
+                </div>
+                <div class="card shadow-xl image-full storm  max-h-80 animate-card">
+                    <figure>
+                        <img src="image/skills/phpstorm.svg" alt="phpstorm" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">PHP Storm</h2>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="w-full max-w-[85rem] px-4 sm:px-6 mx-auto pt-40 pb-10">
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5 text-center">
+                    <div>
+                        <a href="assets/CV/CV_RG.pdf" target="_blank"
+                            class="btn btn-outline lg:float-start cv-button">Moje
+                            CV</a>
+                    </div>
+                    <!-- End Col -->
+
+                    <ul class="text-center">
+                        <li
+                            class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-white-300 dark:before:text-white-600">
+                            <a class="mail inline-flex font-bold gap-x-2" href="mailto:robertgruca201@gmail.com">
+                                robertgruca201@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Col -->
+
+                    <!-- Social Brands -->
+                    <div class="md:text-end space-x-2">
+                        <a class="socilas w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent git-icon"
+                            href="https://github.com/kcreds" target="_blank">
+                            <img class="normal" src="assets/Icons/svg/icons8-github-red.svg" alt="git">
+                            <img class="hover" src="assets/Icons/svg/icons8-github-green.svg" alt="git">
+                        </a>
+
+                        <a class="socilas w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent linkedin-icon"
+                            href="https://www.linkedin.com/in/robert-gruca-635a6b253/" target="_blank">
+                            <img class="normal" src="assets/Icons/svg/icons8-linkedin-red.svg" alt="linkedin">
+                            <img class="hover" src="assets/Icons/svg/icons8-linkedin-green.svg" alt="linkedin">
+                        </a>
+
+                    </div>
+                    <!-- End Social Brands -->
+                </div>
+                <!-- End Grid -->
+            </footer>
+        </div>
+    </div>
+    </div>
+    <script src="loading.js"></script>
+    <script src="scroll.js"></script>
+    <script src="animateOnScroll.js"></script>
+    <script type="module" src="three.js"></script>
+</body>
+
+
+
+
+</html>
