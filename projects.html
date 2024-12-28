@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Gruca - Web DEV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+    <meta name="robots" content="noindex, nofollow" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+    <script type="importmap">
+                {
+                    "imports": {
+                    "three": "https://unpkg.com/three@0.126.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.126.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    padding: {
+                        '8vw': '8vw',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body id="main" class="container mx-auto">
+    <div id="loading-screen" class="fixed inset-0 bg-white flex justify-center items-center">
+        <span class="loader"></span>
+    </div>
+
+    <div class="flex justify-center gap-4 my-4">
+        <h2 class="section-heading pb-7">Projekty komercyjne i prywatne</h2>
+    </div>
+
+    <div class="flex justify-center gap-4 my-4 mb-10">
+        <button id="commercial" class="btn btn-outline btn-custom-active custom-button-project" onclick="selectButton('commercial')">Komercyjne</button>
+        <button id="own" class="btn btn-outline custom-button-project" onclick="selectButton('own')">Własne</button>
+    </div>
+
+    <!-- Karuzela dla Własne -->
+    <div id="own-carousel" class="carousel-container">
+        <div class="carousel w-full">
+            <div id="slide1-own" class="carousel-item relative w-full">
+                <div class="flex justify-start p-2 w-full h-full md:w-1/2 md:h-full text-center">
+                    <div class="text-center md:text-center">
+                        <h2 class="text-5xl tlt font-semibold">newhouse.</h2>
+                        <p class="description">Jest to projekt prostej aplikacji, do zarządzania ogłoszeniami nieruchomości.</p>
+                        <h2 class="text-2xl tlt font-semibold mt-2">Funkcjonalności</h2>
+                        <ul class="list">
+                            <li>możliwość dodawania, edytowania, usuwania ogłoszeń</li>
+                            <li>dynamiczne wyszukiwanie ogłoszeń</li>
+                            <li>system wiadomości połączony z panelem administracyjnym</li>
+                            <li>możliwość dodania własnego szablonu do wyświetlania ogłoszeń nieruchomości</li>
+                        </ul>
+                        <div class="mt-10 items-center">
+                            <a href="https://github.com/kcreds/newhouse." class="btn btn-outline custom-link-btn" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://raw.githubusercontent.com/kcreds/newhouse./refs/heads/main/SC/1.jpg" class="main-img object-cover md:block hidden" alt="Newhouse project">
+            </div>
+        </div>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#slide1-own" class="btn btn-xs btn-slider btn-slider-active">1</a>
+        </div>
+    </div>
+
+    <!-- Karuzela dla commercial -->
+    <div id="commercial-carousel" class="carousel-container hidden">
+        <div class="carousel w-full">
+            <div id="slide1-commercial" class="carousel-item relative w-full">
+                <div class="flex justify-start p-2 w-full h-full md:w-1/2 md:h-full text-center">
+                    <div class="text-center md:text-center">
+                        <h2 class="text-5xl tlt font-semibold">Autodor ERP</h2>
+                        <p class="description">
+                            Zamknięty system internetowy do <span class="color-red">automatyzacji</span> i <span class="color-red">optymalizacji</span> sprzedaży online na platformach takich jak Allegro, Erli i innych. System nie tylko zarządza ofertami sprzedaży, ale również usprawnia proces wystawiania nowych ofert, oszczędzając czas i minimalizując błędy. Dzięki zintegrowanym funkcjom automatyzuje wysyłkę przesyłek do klientów oraz zamawianie sprzedanych produktów z hurtowni.
+                            <br>
+                            <br>
+                            Dodatkowo, aplikacja wspiera zarządzanie własnymi magazynami, pomagając w monitorowaniu stanu zapasów i zarządzaniu procesem magazynowym. Ułatwia to kontrolę nad dostępnością produktów oraz szybkie reagowanie na zmiany w stanach magazynowych, co przekłada się na efektywniejsze zarządzanie całym procesem sprzedaży.
+                        </p>
+                    </div>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjM5yz3ZhRgyl9fWsMROpgL0awtDpTnwt5_A&s" class="main-img md:block hidden" alt="">
+            </div>
+            <div id="slide2-commercial" class="carousel-item relative w-full">
+                <div class="flex justify-start p-2 w-full h-full md:w-1/2 md:h-full text-center">
+                    <div class="text-center md:text-center">
+                        <h2 class="text-5xl tlt font-semibold">Nowaczyński CRM</h2>
+                        <p class="description">
+                            Zamknięty system internetowy do obsługi zamówień oraz sprzedaży, który optymalizuje proces składania i przechowywania zamówień. Dzięki zintegrowanym funkcjom umożliwia szybkie i efektywne tworzenie zamówień, zarządzanie nimi oraz śledzenie statusów.   
+                        </div>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJN9SBpJu4TVyQTLIToLb-M9ibpW36epy9eA&s" class="main-img md:block hidden" alt="">
+            </div>
+        </div>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#slide1-commercial" class="btn btn-xs btn-slider btn-slider-active">1</a>
+            <a href="#slide2-commercial" class="btn btn-xs btn-slider">2</a>
+        </div>
+    </div>
+
+    <script src="loading.js"></script>
+    <script src="functions.js"></script>
+</body>
+</html>

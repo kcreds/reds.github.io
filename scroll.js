@@ -1,49 +1,49 @@
-let sectionOffsets = {};
+// let sectionOffsets = {};
 
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll('.text-content, .skills-content, .head-container');
+// document.addEventListener("DOMContentLoaded", () => {
+//     const sections = document.querySelectorAll('.text-content, .skills-content, .head-container');
 
-    window.addEventListener("wheel", e => {
-        e.preventDefault();
+//     window.addEventListener("wheel", e => {
+//         e.preventDefault();
 
-        const deltaY = e.deltaY;
+//         const deltaY = e.deltaY;
 
-        if (deltaY !== 0) {
-            const direction = deltaY > 0 ? 1 : -1;
-            window.scrollTo({
-                top: window.scrollY + direction * window.innerHeight,
-                behavior: 'smooth'
-            });
-        }
-    }, { passive: false });
-});
+//         if (deltaY !== 0) {
+//             const direction = deltaY > 0 ? 1 : -1;
+//             window.scrollTo({
+//                 top: window.scrollY + direction * window.innerHeight,
+//                 behavior: 'smooth'
+//             });
+//         }
+//     }, { passive: false });
+// });
 
-function customScrollTo(to, duration, easingFunction) {
-    let start = window.scrollY || window.pageYOffset;
+// function customScrollTo(to, duration, easingFunction) {
+//     let start = window.scrollY || window.pageYOffset;
 
-    let time = Date.now();
-    let timeElapsed = 0;
+//     let time = Date.now();
+//     let timeElapsed = 0;
 
-    let speed = (to - start) / duration;
+//     let speed = (to - start) / duration;
 
-    (function move() {
-        if (timeElapsed > duration) {
-            return;
-        }
+//     (function move() {
+//         if (timeElapsed > duration) {
+//             return;
+//         }
 
-        timeElapsed = Date.now() - time;
+//         timeElapsed = Date.now() - time;
 
-        let dy = speed * timeElapsed;
-        let y = start + dy;
+//         let dy = speed * timeElapsed;
+//         let y = start + dy;
 
-        let _y = (y - start) / (to - start);
-        _y = easingFunction(_y);
-        y = start + (to - start) * _y;
+//         let _y = (y - start) / (to - start);
+//         _y = easingFunction(_y);
+//         y = start + (to - start) * _y;
 
-        window.scrollTo(0, y);
-        window.requestAnimationFrame(move);
-    })();
-}
+//         window.scrollTo(0, y);
+//         window.requestAnimationFrame(move);
+//     })();
+// }
 
 function scrollDown() {
     window.scrollBy({
@@ -112,9 +112,9 @@ document.addEventListener('mousemove', (event) => {
 //     }
 // });
 
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-});
+// document.addEventListener('contextmenu', function (e) {
+//     e.preventDefault();
+// });
 
 
 document.addEventListener('DOMContentLoaded', function () {

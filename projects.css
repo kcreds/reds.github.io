@@ -1,0 +1,121 @@
+:root {
+    background-color: #000;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: auto;
+}
+
+.custom-button-project {
+    --color: #CB444B;
+    font-family: inherit;
+    display: inline-block;
+    width: 9em;
+    height: 2em;
+    line-height: 1em;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1rem;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+
+.custom-button-project::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.custom-button-project:hover {
+    color: #64BEA3;
+    border: 2px solid #64BEA3;
+}
+
+.custom-button-project:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+}
+
+.custom-button-project:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+.btn-custom-active{
+    color: #64BEA3;
+    border: 2px solid #64BEA3;
+    background: var(--color);
+}
+
+.section-heading{
+    font-size: 2rem;
+}
+
+.description{
+    color: #64BEA3;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.tlt{
+    color: #CB444B;
+}
+
+.main-img{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    max-height: 500px;
+}
+
+.list{
+    padding-left: 2rem;
+    text-align: left;
+    color: #64BEA3;
+    list-style-type: disc;
+}
+
+li::marker {
+    color: #CB444B;
+}
+
+.custom-link-btn{
+    --color: #CB444B;
+    font-family: inherit;
+    cursor: pointer;
+    color: var(--color);
+    border: 2px solid var(--color);
+}
+
+.custom-link-btn:hover{
+    color: #64BEA3;
+    border: 2px solid #64BEA3;
+    background-color: #CB444B;;
+}
+
+.btn-slider{
+    color: #64BEA3;
+    border: 2px solid #64BEA3;
+    background: var(--color);
+}
+
+.btn-slider-active{
+    color: #64BEA3;
+    border: 2px solid #64BEA3;
+    background-color: #CB444B;;
+}
