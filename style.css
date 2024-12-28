@@ -554,7 +554,7 @@ p {
 }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 700px) {
+@media screen and (max-width: 1000px) {
     html{
         overflow-y: auto;
     }
@@ -571,11 +571,19 @@ p {
         display: none;
         visibility: hidden;
     }
+}
 
+@media screen and (max-width: 1000px) and (min-width: 700px) {
     .text-content,
     p {
         font-size: min(5vw, 1.3rem);
         padding: 5vw;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .project-title{
+        font-size: 1.5rem;
     }
 }
 
