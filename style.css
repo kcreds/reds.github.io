@@ -529,9 +529,32 @@ p {
         margin-top: 2rem;
 
     }
+
+    .text-content,
+p {
+    font-size: min(5vw, 0.8rem);
+    padding: 10vw;
+    text-align: justify;
+}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 699px) and (min-width: 400px) {
+    .text-content,
+p {
+    font-size: 1.1rem;
+    padding: 5vw;
+}
+}
+
+@media screen and (max-width: 399px) and (min-width: 100px) {
+    .text-content,
+p {
+    font-size: 0.8rem;
+    padding: 5vw;
+}
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
     html{
         overflow-y: auto;
     }
@@ -547,6 +570,20 @@ p {
     .position-info {
         display: none;
         visibility: hidden;
+    }
+
+    .text-content,
+    p {
+        font-size: min(5vw, 1.3rem);
+        padding: 5vw;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1001px) {
+    .text-content,
+    p {
+        font-size: 1.5rem;
+        padding: 5vw;
     }
 }
 
