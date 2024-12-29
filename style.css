@@ -549,7 +549,7 @@ p {
 @media screen and (max-width: 399px) and (min-width: 325px) {
     .text-content,
 p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 3vw;
 }
 }
@@ -589,7 +589,7 @@ p {
     }
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 420px) {
     .project-title{
         font-size: 1.7rem;
     }
