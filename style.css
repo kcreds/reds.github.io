@@ -541,16 +541,24 @@ p {
 @media screen and (max-width: 699px) and (min-width: 400px) {
     .text-content,
 p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 5vw;
 }
 }
 
-@media screen and (max-width: 399px) and (min-width: 100px) {
+@media screen and (max-width: 399px) and (min-width: 325px) {
+    .text-content,
+p {
+    font-size: 1rem;
+    padding: 3vw;
+}
+}
+
+@media screen and (max-width: 324px) and (min-width: 100px) {
     .text-content,
 p {
     font-size: 0.8rem;
-    padding: 5vw;
+    padding: 3vw;
 }
 }
 
@@ -581,9 +589,9 @@ p {
     }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 412px) {
     .project-title{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 }
 
