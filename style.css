@@ -591,13 +591,7 @@ p {
 
 @media screen and (max-width: 420px) {
     .project-title{
-        font-size: 1.7rem;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .project-title{
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
