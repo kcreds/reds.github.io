@@ -9,6 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
     </style>
     <meta name="robots" content="noindex, nofollow" />
+    <link href="assets/Icons/favicon.png" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
@@ -167,12 +168,12 @@
                 <button id="own" class="btn btn-outline custom-button-project" onclick="selectButton('own')">Własne</button>
             </div>
         
-            <!-- Karuzela dla Własne -->
-            <div id="own-carousel" class="carousel-container">
-                <div class="carousel w-full">
-                    <div id="slide1-own" class="carousel-item relative w-full">
-                        <div class="flex justify-start p-2 w-full h-full md:w-1/2 md:h-full text-center">
-                            <div class="text-center md:text-center">
+            <!-- Projekty Własne -->
+            <div id="own-projects">
+                <div class="projects w-full">
+                    <div id="slide1-own" class="projects-item relative w-full">
+                        <div class="flex justify-start p-2 w-full h-full text-center">
+                            <div class="text-center text-center">
                                 <h2 class="text-5xl tlt font-semibold project-title">newhouse.</h2>
                                 <p class="description">Jest to projekt prostej aplikacji, do zarządzania ogłoszeniami nieruchomości.</p>
                                 <h2 class="text-2xl tlt font-semibold mt-2">Funkcjonalności</h2>
@@ -186,21 +187,18 @@
                                     <a href="https://github.com/kcreds/newhouse." class="btn btn-outline custom-link-btn" target="_blank">GitHub</a>
                                 </div>
                             </div>
+                            <img src="https://raw.githubusercontent.com/kcreds/newhouse./refs/heads/main/SC/1.jpg" class="main-img object-cover md:block hidden ml-auto" alt="Newhouse project">
                         </div>
-                        <img src="https://raw.githubusercontent.com/kcreds/newhouse./refs/heads/main/SC/1.jpg" class="main-img object-cover md:block hidden" alt="Newhouse project">
                     </div>
-                </div>
-                <div class="flex w-full justify-center gap-2 py-2">
-                    <a href="#slide1-own" class="btn btn-xs btn-slider btn-slider-active">1</a>
                 </div>
             </div>
         
-            <!-- Karuzela dla commercial -->
-            <div id="commercial-carousel" class="carousel-container hidden">
-                <div class="carousel w-full">
-                    <div id="slide1-commercial" class="carousel-item relative w-full">
-                        <div class="flex justify-start p-2 w-full h-full md:w-1/2 md:h-full text-center">
-                            <div class="text-center md:text-center">
+            <!-- Projekty Komerycje -->
+            <div id="commercial-projects">
+                <div class="projects w-full">
+                    <div id="slide1-commercial" class="projects-item relative w-full">
+                        <div class="flex justify-start p-2 w-full h-full text-center">
+                            <div class="text-center md:w-1/2 mr-auto">
                                 <h2 class="text-5xl tlt font-semibold project-title">Autodor ERP</h2>
                                 <p class="description">
                                     Zamknięty system internetowy do <span class="color-red">automatyzacji</span> i <span class="color-red">optymalizacji</span> sprzedaży online na platformach takich jak Allegro, Erli i innych. System nie tylko zarządza ofertami sprzedaży, ale również usprawnia proces wystawiania nowych ofert, oszczędzając czas i minimalizując błędy. Dzięki zintegrowanym funkcjom automatyzuje wysyłkę przesyłek do klientów oraz zamawianie sprzedanych produktów z hurtowni.
@@ -209,23 +207,21 @@
                                     Dodatkowo, aplikacja wspiera zarządzanie własnymi magazynami, pomagając w monitorowaniu stanu zapasów i zarządzaniu procesem magazynowym. Ułatwia to kontrolę nad dostępnością produktów oraz szybkie reagowanie na zmiany w stanach magazynowych, co przekłada się na efektywniejsze zarządzanie całym procesem sprzedaży.
                                 </p>
                             </div>
+                            <img src="image/projects/autodor/main.webp" class="main-img object-cover md:block hidden ml-auto md:w-1/2" alt="">
                         </div>
-                        <img src="image/projects/autodor/main.webp" class="main-img md:block hidden" alt="">
                     </div>
-                    <div id="slide2-commercial" class="carousel-item relative w-full">
-                        <div class="flex justify-start p-2 w-full h-full md:w-1/2 md:h-full text-center">
-                            <div class="text-center md:text-center">
+                    <hr class="project-separator">
+                    <div id="slide2-commercial" class="projects-item relative w-full">
+                        <div class="flex justify-start p-2 w-full h-full text-center">
+                            <div class="text-center md:w-1/2 mr-auto">
                                 <h2 class="text-5xl tlt font-semibold project-title">Nowaczyński CRM</h2>
                                 <p class="description">
-                                    Zamknięty system internetowy do obsługi zamówień oraz sprzedaży, który optymalizuje proces składania i przechowywania zamówień. Dzięki zintegrowanym funkcjom umożliwia szybkie i efektywne tworzenie zamówień, zarządzanie nimi oraz śledzenie statusów.   
-                                </div>
+                                    Zamknięty system internetowy do obsługi zamówień oraz sprzedaży, który optymalizuje proces składania i przechowywania zamówień. Dzięki zintegrowanym funkcjom umożliwia szybkie i efektywne tworzenie zamówień, zarządzanie nimi oraz śledzenie statusów.
+                                </p>
+                            </div>
+                            <img src="image/projects/nowaczynski/main.webp" class="main-img object-cover md:block hidden ml-auto ml-2 md:w-1/2" alt="">
                         </div>
-                        <img src="image/projects/nowaczynski/main.webp" class="main-img md:block hidden" alt="">
                     </div>
-                </div>
-                <div class="flex w-full justify-center gap-2 py-2">
-                    <a href="#slide1-commercial" class="btn btn-xs btn-slider btn-slider-active">1</a>
-                    <a href="#slide2-commercial" class="btn btn-xs btn-slider">2</a>
                 </div>
             </div>
         </div>

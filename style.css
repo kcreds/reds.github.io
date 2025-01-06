@@ -595,6 +595,12 @@ p {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .project-title{
+        font-size: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 1200px) and (min-width: 1001px) {
     .text-content,
     p {
@@ -752,7 +758,7 @@ li::marker {
 
 @keyframes slideFromTop {
     0% {
-      transform: translateY(-20%);
+      transform: translateY(-10%);
       opacity: 0;
     }
     100% {
@@ -760,7 +766,21 @@ li::marker {
       opacity: 1;
     }
   }
+  
+  .projects-slide-top {
+    animation: slideFromTop 1s ease forwards;
+    opacity: 0;
+  }
 
-  .carousel-slide-top {
-    animation: slideFromTop 1s ease-out;
+  .project-separator {
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #cb444b, #64BEA3);
+    border: none;
+    margin: 1rem 0;
+    transition: width 1.5s ease;
+  }
+  
+  .project-separator.animate-separator {
+    width: 100%;
   }
